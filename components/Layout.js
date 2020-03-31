@@ -4,15 +4,15 @@ import Map from './Map';
 
 
 const Layout = (props) => (
-    <div>
+    <div style={{backgroundColor: 'lightgrey'}}>
         <Head>
             <title>Vegan Gems</title>
             <link rel="stylesheet"
-            href="https://bootswatch.com/4/cerulean/bootstrap.min.css"/>
+            href="https://bootswatch.com/4/journal/bootstrap.min.css"/>
         </Head>
         <Navbar/>
         
-        <div className="container">
+        <div className="container" style={{height: 772 }}>
         {props.children}
         </div>
         

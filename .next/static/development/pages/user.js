@@ -23,7 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Dropdown.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Dropdown.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
@@ -89,6 +89,11 @@ var Dropdown = /*#__PURE__*/function (_Component) {
           columnNumber: 7
         }
       }, __jsx("button", {
+        type: "button",
+        className: "btn btn-danger",
+        style: {
+          marginTop: 15
+        },
         onClick: this.showMenu,
         __self: this,
         __source: {
@@ -108,6 +113,11 @@ var Dropdown = /*#__PURE__*/function (_Component) {
           columnNumber: 15
         }
       }, __jsx("button", {
+        type: "button",
+        className: "btn btn-success",
+        style: {
+          marginTop: 10
+        },
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -115,13 +125,19 @@ var Dropdown = /*#__PURE__*/function (_Component) {
           columnNumber: 17
         }
       }, " Completly Vegan "), __jsx("button", {
+        type: "button",
+        className: "btn btn-info",
+        style: {
+          marginLeft: 20,
+          marginTop: 10
+        },
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 51,
           columnNumber: 17
         }
-      }, " Kinda Vegan ")) : null);
+      }, " Mixed ")) : null);
     }
   }]);
 
@@ -148,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./components/Navbar.js");
 /* harmony import */ var _Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Map */ "./components/Map.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Layout.js";
+    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Layout.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -158,6 +174,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Layout = function Layout(props) {
   return __jsx("div", {
+    style: {
+      backgroundColor: 'lightgrey'
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -180,7 +199,7 @@ var Layout = function Layout(props) {
     }
   }, "Vegan Gems"), __jsx("link", {
     rel: "stylesheet",
-    href: "https://bootswatch.com/4/cerulean/bootstrap.min.css",
+    href: "https://bootswatch.com/4/journal/bootstrap.min.css",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -196,6 +215,9 @@ var Layout = function Layout(props) {
     }
   }), __jsx("div", {
     className: "container",
+    style: {
+      height: 772
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -236,7 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Map.js";
+    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -275,27 +297,26 @@ var Map = /*#__PURE__*/function (_Component) {
     value: function render() {
       return (// Important! Always set the container height explicitly
         __jsx("div", {
-          style: {
-            height: '80vh',
-            marginLeft: '510px',
-            paddingTop: '20px'
-          },
+          className: "col-8",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 7
           }
         }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_7___default.a, {
           bootstrapURLKeys: {
             key: "AIzaSyDYz2JjXaniZAsJ0ZPDkUJ4XySzEn0B9vI"
           },
-          defaultCenter: this.props.center,
-          defaultZoom: this.props.zoom,
+          defaultCenter: {
+            lat: 30.2672,
+            lng: -97.7431
+          },
+          defaultZoom: 15,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 21,
             columnNumber: 9
           }
         }, __jsx(AnyReactComponent, {
@@ -304,7 +325,7 @@ var Map = /*#__PURE__*/function (_Component) {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 29,
             columnNumber: 11
           }
         })))
@@ -341,7 +362,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Navbar.js";
+    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Navbar.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -364,7 +385,7 @@ var Navbar = function Navbar() {
       lineNumber: 8,
       columnNumber: 5
     }
-  }, __jsx("a", {
+  }, __jsx("h1", {
     className: "navbar-brand",
     href: "#",
     __self: _this,
@@ -4759,10 +4780,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CClassStuff%5Cpractice%5CReact%5Cmy-app%5Cpages%5Cuser.js!./":
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CClassStuff%5Cpractice%5CReact%5Cmy-app%5Cpages%5Cuser.js ***!
-  \************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cuser.js!./":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cuser.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9054,7 +9075,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
 /* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Dropdown */ "./components/Dropdown.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\pages\\user.js";
+    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\user.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -9093,12 +9114,16 @@ var User = function User() {
       columnNumber: 7
     }
   }, __jsx("input", {
+    type: "email",
+    className: "form-control",
+    id: "exampleInputEmail1",
+    "aria-describedby": "emailHelp",
     placeholder: "First Name",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
-      columnNumber: 9
+      columnNumber: 7
     }
   }), __jsx("br", {
     __self: _this,
@@ -9108,6 +9133,10 @@ var User = function User() {
       columnNumber: 9
     }
   }), __jsx("input", {
+    type: "email",
+    className: "form-control",
+    id: "exampleInputEmail1",
+    "aria-describedby": "emailHelp",
     placeholder: "Last Name",
     __self: _this,
     __source: {
@@ -9123,7 +9152,11 @@ var User = function User() {
       columnNumber: 9
     }
   }), __jsx("input", {
-    placeholder: "Email",
+    type: "email",
+    className: "form-control",
+    id: "exampleInputEmail1",
+    "aria-describedby": "emailHelp",
+    placeholder: "Enter email",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -9138,6 +9171,11 @@ var User = function User() {
       columnNumber: 9
     }
   }), __jsx("button", {
+    type: "button",
+    className: "btn btn-primary btn-lg",
+    style: {
+      marginTop: 15
+    },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -9151,14 +9189,14 @@ var User = function User() {
 
 /***/ }),
 
-/***/ 2:
-/*!****************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CClassStuff%5Cpractice%5CReact%5Cmy-app%5Cpages%5Cuser.js ***!
-  \****************************************************************************************************************************************************/
+/***/ 4:
+/*!*********************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cuser.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CClassStuff%5Cpractice%5CReact%5Cmy-app%5Cpages%5Cuser.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CClassStuff%5Cpractice%5CReact%5Cmy-app%5Cpages%5Cuser.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cuser.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fuser&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cuser.js!./");
 
 
 /***/ }),
@@ -9174,5 +9212,5 @@ module.exports = dll_c2e10d183b950a67d9e7;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=user.js.map

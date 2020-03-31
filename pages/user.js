@@ -8,16 +8,16 @@ const User = () => (
       <h1>Welcome to Vegan Gems</h1>
 
       <form>
-        <input placeholder="First Name"></input>
+      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name"></input>
         <br />
-        <input placeholder="Last Name"></input>
+        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name"></input>
         <br />
-        <input placeholder="Email"></input>
+        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
 
 
         <Dropdown/>
 
-        <button>Submit</button>
+        <button type="button" className="btn btn-primary btn-lg" style={{marginTop:15}}>Submit</button>
       </form>
     </div>
   </Layout>

@@ -14,12 +14,17 @@ class Map extends Component {
  
   render() {
     return (
+
       // Important! Always set the container height explicitly
-      <div style={{ height: '80vh', marginLeft: '510px', paddingTop: '20px' }}>
+      <div className="col-8">
+
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          bootstrapURLKeys={{ key: "AIzaSyDYz2JjXaniZAsJ0ZPDkUJ4XySzEn0B9vI" }}
+          defaultCenter={ {
+            lat: 30.2672,
+            lng: -97.7431
+          }}
+          defaultZoom={15}
         >
           <AnyReactComponent
             lat={30.2672}

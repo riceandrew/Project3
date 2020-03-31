@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -108,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./components/Navbar.js");
 /* harmony import */ var _Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Map */ "./components/Map.js");
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Layout.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -116,6 +116,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const Layout = props => __jsx("div", {
+  style: {
+    backgroundColor: 'lightgrey'
+  },
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -138,7 +141,7 @@ const Layout = props => __jsx("div", {
   }
 }, "Vegan Gems"), __jsx("link", {
   rel: "stylesheet",
-  href: "https://bootswatch.com/4/cerulean/bootstrap.min.css",
+  href: "https://bootswatch.com/4/journal/bootstrap.min.css",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -154,6 +157,9 @@ const Layout = props => __jsx("div", {
   }
 }), __jsx("div", {
   className: "container",
+  style: {
+    height: 772
+  },
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -179,7 +185,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Map.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -202,27 +208,26 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     return (// Important! Always set the container height explicitly
       __jsx("div", {
-        style: {
-          height: '80vh',
-          marginLeft: '510px',
-          paddingTop: '20px'
-        },
+        className: "col-8",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 19,
           columnNumber: 7
         }
       }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
         bootstrapURLKeys: {
           key: "AIzaSyDYz2JjXaniZAsJ0ZPDkUJ4XySzEn0B9vI"
         },
-        defaultCenter: this.props.center,
-        defaultZoom: this.props.zoom,
+        defaultCenter: {
+          lat: 30.2672,
+          lng: -97.7431
+        },
+        defaultZoom: 15,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 21,
           columnNumber: 9
         }
       }, __jsx(AnyReactComponent, {
@@ -231,7 +236,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
+          lineNumber: 29,
           columnNumber: 11
         }
       })))
@@ -265,7 +270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Navbar.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -286,7 +291,7 @@ const Navbar = () => __jsx("nav", {
     lineNumber: 8,
     columnNumber: 5
   }
-}, __jsx("a", {
+}, __jsx("h1", {
   className: "navbar-brand",
   href: "#",
   __self: undefined,
@@ -399,7 +404,7 @@ const Navbar = () => __jsx("nav", {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Prices.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Prices.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -475,7 +480,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\components\\Restlist.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Restlist.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -496,42 +501,18 @@ const AnyReactComponent = ({
 
 class Restlist extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return (// Important! Always set the container height explicitly
-      __jsx("div", {
-        style: {
-          height: '80vh',
-          marginRight: '650px',
-          paddingTop: '100px'
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19,
-          columnNumber: 11
-        }
-      }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        bootstrapURLKeys: {
-          key: "AIzaSyDYz2JjXaniZAsJ0ZPDkUJ4XySzEn0B9vI"
-        },
-        defaultCenter: this.props.center,
-        defaultZoom: this.props.zoom,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20,
-          columnNumber: 13
-        }
-      }, __jsx(AnyReactComponent, {
-        lat: 30.2672,
-        lng: -97.7431,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 15
-        }
-      })))
-    );
+    return __jsx("div", {
+      className: "col-4 border",
+      style: {
+        backgroundColor: 'white'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 11
+      }
+    }, "This is where the list will go");
   }
 
 }
@@ -2240,7 +2221,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Prices__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Prices */ "./components/Prices.js");
 /* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
 /* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
-var _jsxFileName = "C:\\Users\\ricea\\ClassStuff\\practice\\React\\my-app\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2253,58 +2234,115 @@ const Index = props => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["de
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10,
-    columnNumber: 5
-  }
-}, __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
     lineNumber: 11,
-    columnNumber: 5
+    columnNumber: 9
   }
-}, __jsx("h1", {
+}, __jsx("link", {
+  rel: "stylesheet",
+  href: "https://bootswatch.com/4/journal/bootstrap.min.css",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 12,
-    columnNumber: 9
+    columnNumber: 11
   }
-}, "Welcome to Vegan Gems")), __jsx("div", {
+}), __jsx("div", {
+  className: "container",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 14,
     columnNumber: 5
   }
-}, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}, __jsx("h1", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 15,
+    columnNumber: 9
+  }
+}, "Welcome to Vegan Gems"), __jsx("br", {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16,
+    columnNumber: 9
+  }
+}), __jsx("button", {
+  id: "veganMap",
+  type: "button",
+  class: "btn btn-success",
+  style: {
+    marginRight: 40,
+    marginLeft: 20,
+    marginBottom: 5
+  },
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17,
+    columnNumber: 9
+  }
+}, "Completly Vegan"), __jsx("button", {
+  id: "mixedMap",
+  type: "button",
+  class: "btn btn-success",
+  style: {
+    marginBottom: 5
+  },
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18,
+    columnNumber: 9
+  }
+}, "Mixed")), __jsx("div", {
+  className: "container",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20,
+    columnNumber: 5
+  }
+}, __jsx("div", {
+  className: "row",
+  style: {
+    height: 600
+  },
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21,
+    columnNumber: 1
+  }
+}, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 22,
     columnNumber: 5
   }
 }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16,
+    lineNumber: 23,
     columnNumber: 5
   }
-})));
+}))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ricea\ClassStuff\practice\React\my-app\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\ricea\Homework\Project3\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

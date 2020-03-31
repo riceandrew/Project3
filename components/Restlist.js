@@ -15,18 +15,8 @@ class Restlist extends Component {
      
       render() {
         return (
-          // Important! Always set the container height explicitly
-          <div style={{ height: '80vh', marginRight: '650px', paddingTop: '100px' }}>
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: "" }}
-              defaultCenter={this.props.center}
-              defaultZoom={this.props.zoom}
-            >
-              <AnyReactComponent
-                lat={30.2672}
-                lng={-97.7431}
-              />
-            </GoogleMapReact>
+          <div className="col-4 border" style={{backgroundColor: 'white'}}>
+            This is where the list will go
           </div>
         );
       }

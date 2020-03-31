@@ -6,9 +6,9 @@ const Navbar = () => (
     bg-dark mb-4"
   >
     <div className="container">
-      <a className="navbar-brand" href="#">
+      <h1 className="navbar-brand" href="#">
         Vegan Gems
-      </a>
+      </h1>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
