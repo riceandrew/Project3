@@ -185,10 +185,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! google-maps-react */ "google-maps-react");
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -199,7 +202,7 @@ const AnyReactComponent = ({
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 4,
+    lineNumber: 6,
     columnNumber: 41
   }
 }, text);
@@ -212,12 +215,12 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 21,
           columnNumber: 7
         }
       }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
         bootstrapURLKeys: {
-          key: "AIzaSyDYz2JjXaniZAsJ0ZPDkUJ4XySzEn0B9vI"
+          key: ""
         },
         defaultCenter: {
           lat: 30.2672,
@@ -227,17 +230,48 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 23,
           columnNumber: 9
         }
       }, __jsx(AnyReactComponent, {
-        lat: 30.2672,
-        lng: -97.7431,
+        lat: 30.261653,
+        lng: -97.760059,
+        text: "Juliet's",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 11
+          lineNumber: 31,
+          columnNumber: 9
+        }
+      }), __jsx(AnyReactComponent, {
+        lat: 30.253737,
+        lng: -97.714451,
+        text: "Intero",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 9
+        }
+      }), __jsx(AnyReactComponent, {
+        lat: 30.265560,
+        lng: -97.749093,
+        text: "Le Politique",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }), __jsx(AnyReactComponent, {
+        lat: 30.265690,
+        lng: -97.744799,
+        text: "Red Ash",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 9
         }
       })))
     );
@@ -390,80 +424,6 @@ const Navbar = () => __jsx("nav", {
 }, "User Login")))))));
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
-
-/***/ }),
-
-/***/ "./components/Prices.js":
-/*!******************************!*\
-  !*** ./components/Prices.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Prices.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-class Prices extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "state", {
-      currency: 'USD'
-    });
-  }
-
-  render() {
-    return __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7,
-        columnNumber: 17
-      }
-    }, __jsx("ul", {
-      className: "list-group",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8,
-        columnNumber: 13
-      }
-    }, __jsx("li", {
-      className: "list-group-item",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9,
-        columnNumber: 13
-      }
-    }, "Bitcoin rate for ", this.props.bpi.USD.description, ": ", __jsx("span", {
-      className: "badge badge-primary",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11,
-        columnNumber: 11
-      }
-    }, this.props.bpi.USD.code), "  ", __jsx("strong", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12,
-        columnNumber: 47
-      }
-    }, this.props.bpi.USD.rate))));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Prices);
 
 /***/ }),
 
@@ -2218,13 +2178,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_Prices__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Prices */ "./components/Prices.js");
-/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
-/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
+/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
 var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -2271,7 +2229,7 @@ const Index = props => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["de
 }), __jsx("button", {
   id: "veganMap",
   type: "button",
-  class: "btn btn-success",
+  className: "btn btn-success",
   style: {
     marginRight: 40,
     marginLeft: 20,
@@ -2286,7 +2244,7 @@ const Index = props => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["de
 }, "Completly Vegan"), __jsx("button", {
   id: "mixedMap",
   type: "button",
-  class: "btn btn-success",
+  className: "btn btn-success",
   style: {
     marginBottom: 5
   },
@@ -2315,14 +2273,14 @@ const Index = props => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["de
     lineNumber: 21,
     columnNumber: 1
   }
-}, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_5__["default"], {
+}, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 22,
     columnNumber: 5
   }
-}), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -2355,6 +2313,17 @@ module.exports = __webpack_require__(/*! C:\Users\ricea\Homework\Project3\pages\
 /***/ (function(module, exports) {
 
 module.exports = require("google-map-react");
+
+/***/ }),
+
+/***/ "google-maps-react":
+/*!************************************!*\
+  !*** external "google-maps-react" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("google-maps-react");
 
 /***/ }),
 
