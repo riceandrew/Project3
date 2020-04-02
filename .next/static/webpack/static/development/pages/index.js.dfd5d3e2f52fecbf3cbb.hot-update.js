@@ -1,0 +1,167 @@
+webpackHotUpdate("static\\development\\pages\\index.js",{
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
+/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
+
+
+
+
+
+var Index = function Index(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    all: [{
+      title: "Juliet's",
+      name: "Juliet's",
+      position: {
+        lat: "30.261653",
+        lng: "-97.760059"
+      },
+      url: "Website"
+    }, {
+      title: "Intero",
+      name: "Intero",
+      position: {
+        lat: "30.253737",
+        lng: "-97.714451"
+      },
+      url: "Website"
+    }, {
+      title: "Le Politique",
+      name: "Le Politique",
+      position: {
+        lat: "30.265560",
+        lng: "-97.749093"
+      },
+      url: "Website"
+    }],
+    vegan: [],
+    mixed: []
+  }),
+      values = _useState[0],
+      setValues = _useState[1];
+
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 10
+    }
+  }, __jsx("link", {
+    rel: "stylesheet",
+    href: "https://bootswatch.com/4/journal/bootstrap.min.css",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 5
+    }
+  }), __jsx("div", {
+    className: "container",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 5
+    }
+  }, __jsx("h1", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 7
+    }
+  }, "Welcome to Vegan Gems"), __jsx("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 7
+    }
+  }), __jsx("button", {
+    id: "veganMap",
+    type: "button",
+    className: "btn btn-success",
+    style: {
+      marginRight: 40,
+      marginLeft: 20,
+      marginBottom: 5
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 7
+    }
+  }, "Completly Vegan"), __jsx("button", {
+    id: "mixedMap",
+    type: "button",
+    className: "btn btn-success",
+    style: {
+      marginBottom: 5
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 7
+    }
+  }, "Mixed")), __jsx("div", {
+    className: "container",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "row",
+    style: {
+      height: 600
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 9
+    }
+  }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    markers: values,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 9
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ })
+
+})
+//# sourceMappingURL=index.js.dfd5d3e2f52fecbf3cbb.hot-update.js.map

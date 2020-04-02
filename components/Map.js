@@ -1,58 +1,128 @@
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import Marker from 'google-maps-react';
+import React, { Component } from "react";
+// import GoogleMapReact from 'google-map-react';
+// import Marker from 'google-maps-react';
 
- 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
- 
-class Map extends Component {
-  static defaultProps = {
-    center: {
-      lat: 30.2672,
-      lng: -97.7431
-    },
-    zoom: 15
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+
+export class MapContainer extends Component {
+
+
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
   };
  
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+ 
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
+
+
   render() {
     return (
-
-      // Important! Always set the container height explicitly
-      <div className="col-8">
-
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "" }}
-          defaultCenter={ {
-            lat: 30.2672,
-            lng: -97.7431
-          }}
-          defaultZoom={15}
-        >
-        <AnyReactComponent
-            lat={30.261653}
-            lng={-97.760059}
-            text="Juliet's"
+      <Map google={this.props.google}
+      style={{ height: 600, width: 700}}
+      initialCenter={{
+        lat: 30.2672,
+        lng: -97.7431
+      }}
+      zoom={14}
+      onClick={this.onMapClicked}>
+        {this.props.markers.all.map(marker => (
+          <Marker
+            title={marker.title}
+            name={marker.name}
+            position={marker.position}
+            url={marker.url}
+            onClick={this.onMapClicked}
+            onClick={this.onMarkerClick}
           />
-        <AnyReactComponent
-            lat={30.253737}
-            lng={-97.714451}
-            text="Intero"
-        />
-        <AnyReactComponent
-            lat={30.265560}
-            lng={-97.749093}
-            text="Le Politique"
-        />
-        <AnyReactComponent
-            lat={30.265690}
-            lng={-97.744799}
-            text="Red Ash"
-        />
-
-        </GoogleMapReact>
-      </div>
+        ))}
+          <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}>
+            <div>
+              <h4>{this.state.selectedPlace.name}</h4>
+              <a href={this.state.selectedPlace.picture}>{this.state.selectedPlace.picture}</a>
+              <a href={this.state.selectedPlace.url}>{this.state.selectedPlace.url}</a>
+            </div>
+        </InfoWindow>
+      </Map>
     );
   }
 }
- 
-export default Map;
+
+export default GoogleApiWrapper({
+  apiKey: "API KEY GOES HERE"
+})(MapContainer);
+
+
+
+
+
+//BACKUP MAP
+// const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+// class Map extends Component {
+//   static defaultProps = {
+//     center: {
+//       lat: 30.2672,
+//       lng: -97.7431
+//     },
+//     zoom: 15
+//   };
+
+//   render() {
+//     return (
+
+//       // Important! Always set the container height explicitly
+//       <div className="col-8">
+
+//         <GoogleMapReact
+//           bootstrapURLKeys={{ key: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE" }}
+//           defaultCenter={ {
+//             lat: 30.2672,
+//             lng: -97.7431
+//           }}
+//           defaultZoom={15}
+//         >
+//         <AnyReactComponent
+//             lat={30.261653}
+//             lng={-97.760059}
+//             text="Juliet's"
+//           />
+//         <AnyReactComponent
+//             lat={30.253737}
+//             lng={-97.714451}
+//             text="Intero"
+//         />
+//         <AnyReactComponent
+//             lat={30.265560}
+//             lng={-97.749093}
+//             text="Le Politique"
+//         />
+//         <AnyReactComponent
+//             lat={30.265690}
+//             lng={-97.744799}
+//             text="Red Ash"
+//         />
+
+//         </GoogleMapReact>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Map;

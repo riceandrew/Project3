@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -176,118 +176,176 @@ const Layout = props => __jsx("div", {
 /*!***************************!*\
   !*** ./components/Map.js ***!
   \***************************/
-/*! exports provided: default */
+/*! exports provided: MapContainer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapContainer", function() { return MapContainer; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! google-maps-react */ "google-maps-react");
-/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-maps-react */ "google-maps-react");
+/* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+ // import GoogleMapReact from 'google-map-react';
+// import Marker from 'google-maps-react';
 
 
+class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
 
+    _defineProperty(this, "state", {
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {}
+    });
 
-const AnyReactComponent = ({
-  text
-}) => __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6,
-    columnNumber: 41
+    _defineProperty(this, "onMarkerClick", (props, marker, e) => this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    }));
+
+    _defineProperty(this, "onMapClicked", props => {
+      if (this.state.showingInfoWindow) {
+        this.setState({
+          showingInfoWindow: false,
+          activeMarker: null
+        });
+      }
+    });
   }
-}, text);
 
-class Map extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return (// Important! Always set the container height explicitly
-      __jsx("div", {
-        className: "col-8",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21,
-          columnNumber: 7
-        }
-      }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        bootstrapURLKeys: {
-          key: ""
-        },
-        defaultCenter: {
-          lat: 30.2672,
-          lng: -97.7431
-        },
-        defaultZoom: 15,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 9
-        }
-      }, __jsx(AnyReactComponent, {
-        lat: 30.261653,
-        lng: -97.760059,
-        text: "Juliet's",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31,
-          columnNumber: 9
-        }
-      }), __jsx(AnyReactComponent, {
-        lat: 30.253737,
-        lng: -97.714451,
-        text: "Intero",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36,
-          columnNumber: 9
-        }
-      }), __jsx(AnyReactComponent, {
-        lat: 30.265560,
-        lng: -97.749093,
-        text: "Le Politique",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 9
-        }
-      }), __jsx(AnyReactComponent, {
-        lat: 30.265690,
-        lng: -97.744799,
-        text: "Red Ash",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46,
-          columnNumber: 9
-        }
-      })))
-    );
+    return __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Map"], {
+      google: this.props.google,
+      style: {
+        height: 600,
+        width: 700
+      },
+      initialCenter: {
+        lat: 30.2672,
+        lng: -97.7431
+      },
+      zoom: 14,
+      onClick: this.onMapClicked,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35,
+        columnNumber: 7
+      }
+    }, this.props.markers.all.map(marker => __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+      title: marker.title,
+      name: marker.name,
+      position: marker.position,
+      url: marker.url,
+      onClick: this.onMapClicked,
+      onClick: this.onMarkerClick,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 11
+      }
+    })), __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["InfoWindow"], {
+      marker: this.state.activeMarker,
+      visible: this.state.showingInfoWindow,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53,
+        columnNumber: 11
+      }
+    }, __jsx("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56,
+        columnNumber: 13
+      }
+    }, __jsx("h4", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 15
+      }
+    }, this.state.selectedPlace.name), __jsx("a", {
+      href: this.state.selectedPlace.picture,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58,
+        columnNumber: 15
+      }
+    }, this.state.selectedPlace.picture), __jsx("a", {
+      href: this.state.selectedPlace.url,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59,
+        columnNumber: 15
+      }
+    }, this.state.selectedPlace.url))));
   }
 
 }
-
-_defineProperty(Map, "defaultProps", {
-  center: {
-    lat: 30.2672,
-    lng: -97.7431
-  },
-  zoom: 15
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Map);
+/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
+  apiKey: "API KEY GOES HERE"
+})(MapContainer)); //BACKUP MAP
+// const AnyReactComponent = ({ text }) => <div>{text}</div>;
+// class Map extends Component {
+//   static defaultProps = {
+//     center: {
+//       lat: 30.2672,
+//       lng: -97.7431
+//     },
+//     zoom: 15
+//   };
+//   render() {
+//     return (
+//       // Important! Always set the container height explicitly
+//       <div className="col-8">
+//         <GoogleMapReact
+//           bootstrapURLKeys={{ key: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE" }}
+//           defaultCenter={ {
+//             lat: 30.2672,
+//             lng: -97.7431
+//           }}
+//           defaultZoom={15}
+//         >
+//         <AnyReactComponent
+//             lat={30.261653}
+//             lng={-97.760059}
+//             text="Juliet's"
+//           />
+//         <AnyReactComponent
+//             lat={30.253737}
+//             lng={-97.714451}
+//             text="Intero"
+//         />
+//         <AnyReactComponent
+//             lat={30.265560}
+//             lng={-97.749093}
+//             text="Le Politique"
+//         />
+//         <AnyReactComponent
+//             lat={30.265690}
+//             lng={-97.744799}
+//             text="Red Ash"
+//         />
+//         </GoogleMapReact>
+//       </div>
+//     );
+//   }
+// }
+// export default Map;
 
 /***/ }),
 
@@ -2173,127 +2231,191 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
-/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
+/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\index.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
 
-const Index = props => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11,
-    columnNumber: 9
-  }
-}, __jsx("link", {
-  rel: "stylesheet",
-  href: "https://bootswatch.com/4/journal/bootstrap.min.css",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12,
-    columnNumber: 11
-  }
-}), __jsx("div", {
-  className: "container",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14,
-    columnNumber: 5
-  }
-}, __jsx("h1", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15,
-    columnNumber: 9
-  }
-}, "Welcome to Vegan Gems"), __jsx("br", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 16,
-    columnNumber: 9
-  }
-}), __jsx("button", {
-  id: "veganMap",
-  type: "button",
-  className: "btn btn-success",
-  style: {
-    marginRight: 40,
-    marginLeft: 20,
-    marginBottom: 5
-  },
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17,
-    columnNumber: 9
-  }
-}, "Completly Vegan"), __jsx("button", {
-  id: "mixedMap",
-  type: "button",
-  className: "btn btn-success",
-  style: {
-    marginBottom: 5
-  },
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18,
-    columnNumber: 9
-  }
-}, "Mixed")), __jsx("div", {
-  className: "container",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 20,
-    columnNumber: 5
-  }
-}, __jsx("div", {
-  className: "row",
-  style: {
-    height: 600
-  },
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21,
-    columnNumber: 1
-  }
-}, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_4__["default"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 22,
-    columnNumber: 5
-  }
-}), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 23,
-    columnNumber: 5
-  }
-}))));
+
+const Index = props => {
+  let {
+    0: values,
+    1: setValues
+  } = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    all: [{
+      title: "Juliet's",
+      name: "Juliet's",
+      position: {
+        lat: "30.261653",
+        lng: "-97.760059"
+      },
+      url: "http://www.juliet-austin.com/"
+    }, {
+      title: "Intero",
+      name: "Intero",
+      position: {
+        lat: "30.253737",
+        lng: "-97.714451"
+      },
+      url: "https://www.interorestaurant.com/"
+    }, {
+      title: "Le Politique",
+      name: "Le Politique",
+      position: {
+        lat: "30.265560",
+        lng: "-97.749093"
+      },
+      url: "https://lepolitiqueaustin.com/"
+    }, {
+      title: "Red Ash",
+      name: "Red Ash",
+      position: {
+        lat: "30.265690",
+        lng: "-97.744799"
+      },
+      url: "http://www.redashgrill.com/"
+    }, {
+      title: "Flyrite",
+      name: "Flyrite",
+      position: {
+        lat: "30.261338",
+        lng: "-97.718455"
+      },
+      url: "https://www.flyritechicken.com/"
+    }, {
+      title: "Koriente",
+      name: "Koriente",
+      position: {
+        lat: "30.267016",
+        lng: "-97.735982"
+      },
+      url: "https://www.koriente.com/"
+    }, {
+      title: "El Chilito",
+      name: "El Chilito",
+      position: {
+        lat: "30.263022",
+        lng: "-97.724423"
+      },
+      url: "https://www.elchilito.com/menu-3/"
+    }],
+    vegan: [],
+    mixed: []
+  });
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 10
+    }
+  }, __jsx("link", {
+    rel: "stylesheet",
+    href: "https://bootswatch.com/4/journal/bootstrap.min.css",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 5
+    }
+  }), __jsx("div", {
+    className: "container",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 5
+    }
+  }, __jsx("h1", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 7
+    }
+  }, "Welcome to Vegan Gems"), __jsx("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 7
+    }
+  }), __jsx("button", {
+    id: "veganMap",
+    type: "button",
+    className: "btn btn-success",
+    style: {
+      marginRight: 40,
+      marginLeft: 20,
+      marginBottom: 5
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 7
+    }
+  }, "Completly Vegan"), __jsx("button", {
+    id: "mixedMap",
+    type: "button",
+    className: "btn btn-success",
+    style: {
+      marginBottom: 5
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 7
+    }
+  }, "Mixed")), __jsx("div", {
+    className: "container",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "row",
+    style: {
+      height: 600
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 9
+    }
+  }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    markers: values,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 9
+    }
+  }))));
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -2324,17 +2446,6 @@ module.exports = require("google-map-react");
 /***/ (function(module, exports) {
 
 module.exports = require("google-maps-react");
-
-/***/ }),
-
-/***/ "isomorphic-unfetch":
-/*!*************************************!*\
-  !*** external "isomorphic-unfetch" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
 
 /***/ }),
 

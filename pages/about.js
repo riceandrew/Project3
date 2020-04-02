@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import Map from '../components/Map'
 
 const About = () => (
     <Layout>
@@ -12,7 +11,6 @@ const About = () => (
             often times that is not what people are looking for.
             </h3>
     </div>
-    <Map/>
     </Layout>
 );
 

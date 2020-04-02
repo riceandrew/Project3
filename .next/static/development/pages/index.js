@@ -87,21 +87,21 @@ var Layout = function Layout(props) {
 /*!***************************!*\
   !*** ./components/Map.js ***!
   \***************************/
-/*! exports provided: default */
+/*! exports provided: MapContainer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapContainer", function() { return MapContainer; });
 /* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! google-map-react */ "./node_modules/google-map-react/lib/index.js");
-/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! google-maps-react */ "./node_modules/google-maps-react/dist/index.js");
 /* harmony import */ var google_maps_react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(google_maps_react__WEBPACK_IMPORTED_MODULE_8__);
 
@@ -111,126 +111,191 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _this = undefined,
-    _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
+var _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\components\\Map.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
-
-function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, result); }; }
+function _createSuper(Derived) { return function () { var Super = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = Object(_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Object(_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
+ // import GoogleMapReact from 'google-map-react';
+// import Marker from 'google-maps-react';
 
 
+var MapContainer = /*#__PURE__*/function (_Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(MapContainer, _Component);
 
+  var _super = _createSuper(MapContainer);
 
-var AnyReactComponent = function AnyReactComponent(_ref) {
-  var text = _ref.text;
-  return __jsx("div", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 41
+  function MapContainer() {
+    var _this;
+
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, MapContainer);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }, text);
-};
 
-var Map = /*#__PURE__*/function (_Component) {
-  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Map, _Component);
+    _this = _super.call.apply(_super, [this].concat(args));
 
-  var _super = _createSuper(Map);
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "state", {
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {}
+    });
 
-  function Map() {
-    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Map);
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "onMarkerClick", function (props, marker, e) {
+      return _this.setState({
+        selectedPlace: props,
+        activeMarker: marker,
+        showingInfoWindow: true
+      });
+    });
 
-    return _super.apply(this, arguments);
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this), "onMapClicked", function (props) {
+      if (_this.state.showingInfoWindow) {
+        _this.setState({
+          showingInfoWindow: false,
+          activeMarker: null
+        });
+      }
+    });
+
+    return _this;
   }
 
-  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Map, [{
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(MapContainer, [{
     key: "render",
     value: function render() {
-      return (// Important! Always set the container height explicitly
-        __jsx("div", {
-          className: "col-8",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 21,
-            columnNumber: 7
-          }
-        }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_7___default.a, {
-          bootstrapURLKeys: {
-            key: ""
-          },
-          defaultCenter: {
-            lat: 30.2672,
-            lng: -97.7431
-          },
-          defaultZoom: 15,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 9
-          }
-        }, __jsx(AnyReactComponent, {
-          lat: 30.261653,
-          lng: -97.760059,
-          text: "Juliet's",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 31,
-            columnNumber: 9
-          }
-        }), __jsx(AnyReactComponent, {
-          lat: 30.253737,
-          lng: -97.714451,
-          text: "Intero",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 36,
-            columnNumber: 9
-          }
-        }), __jsx(AnyReactComponent, {
-          lat: 30.265560,
-          lng: -97.749093,
-          text: "Le Politique",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 41,
-            columnNumber: 9
-          }
-        }), __jsx(AnyReactComponent, {
-          lat: 30.265690,
-          lng: -97.744799,
-          text: "Red Ash",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 46,
-            columnNumber: 9
-          }
-        })))
-      );
+      var _this2 = this;
+
+      return __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["Map"], {
+        google: this.props.google,
+        style: {
+          height: 600,
+          width: 700
+        },
+        initialCenter: {
+          lat: 30.2672,
+          lng: -97.7431
+        },
+        zoom: 14,
+        onClick: this.onMapClicked,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35,
+          columnNumber: 7
+        }
+      }, this.props.markers.all.map(function (marker) {
+        var _jsx;
+
+        return __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["Marker"], (_jsx = {
+          title: marker.title,
+          name: marker.name,
+          position: marker.position,
+          url: marker.url,
+          onClick: _this2.onMapClicked
+        }, Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_jsx, "onClick", _this2.onMarkerClick), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_jsx, "__self", _this2), Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(_jsx, "__source", {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 11
+        }), _jsx));
+      }), __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["InfoWindow"], {
+        marker: this.state.activeMarker,
+        visible: this.state.showingInfoWindow,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 11
+        }
+      }, __jsx("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 13
+        }
+      }, __jsx("h4", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 15
+        }
+      }, this.state.selectedPlace.name), __jsx("a", {
+        href: this.state.selectedPlace.picture,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 15
+        }
+      }, this.state.selectedPlace.picture), __jsx("a", {
+        href: this.state.selectedPlace.url,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 15
+        }
+      }, this.state.selectedPlace.url))));
     }
   }]);
 
-  return Map;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
-
-Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(Map, "defaultProps", {
-  center: {
-    lat: 30.2672,
-    lng: -97.7431
-  },
-  zoom: 15
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Map);
+  return MapContainer;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+/* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["GoogleApiWrapper"])({
+  apiKey: "API KEY GOES HERE"
+})(MapContainer)); //BACKUP MAP
+// const AnyReactComponent = ({ text }) => <div>{text}</div>;
+// class Map extends Component {
+//   static defaultProps = {
+//     center: {
+//       lat: 30.2672,
+//       lng: -97.7431
+//     },
+//     zoom: 15
+//   };
+//   render() {
+//     return (
+//       // Important! Always set the container height explicitly
+//       <div className="col-8">
+//         <GoogleMapReact
+//           bootstrapURLKeys={{ key: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE" }}
+//           defaultCenter={ {
+//             lat: 30.2672,
+//             lng: -97.7431
+//           }}
+//           defaultZoom={15}
+//         >
+//         <AnyReactComponent
+//             lat={30.261653}
+//             lng={-97.760059}
+//             text="Juliet's"
+//           />
+//         <AnyReactComponent
+//             lat={30.253737}
+//             lng={-97.714451}
+//             text="Intero"
+//         />
+//         <AnyReactComponent
+//             lat={30.265560}
+//             lng={-97.749093}
+//             text="Le Politique"
+//         />
+//         <AnyReactComponent
+//             lat={30.265690}
+//             lng={-97.744799}
+//             text="Red Ash"
+//         />
+//         </GoogleMapReact>
+//       </div>
+//     );
+//   }
+// }
+// export default Map;
 
 /***/ }),
 
@@ -6560,8 +6625,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   Map.defaultProps = {
     zoom: 14,
     initialCenter: {
-      lat: 37.774929,
-      lng: -122.419416
+      lat: 30.2672,
+      lng: -97.7431
     },
     center: {},
     centerAroundCurrentLocation: false,
@@ -7007,18 +7072,6 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js"))&&"object"==typeof e&&"default"in e?e.default:e,r=/https?|ftp|gopher|file/;function o(e){"string"==typeof e&&(e=f(e));var o=function(e,t,r){var o=e.auth,a=e.hostname,s=e.protocol||"",h=e.pathname||"",c=e.hash||"",p=e.query||"",n=!1;o=o?encodeURIComponent(o).replace(/%3A/i,":")+"@":"",e.host?n=o+e.host:a&&(n=o+(~a.indexOf(":")?"["+a+"]":a),e.port&&(n+=":"+e.port)),p&&"object"==typeof p&&(p=t.encode(p));var l=e.search||p&&"?"+p||"";return s&&":"!==s.substr(-1)&&(s+=":"),e.slashes||(!s||r.test(s))&&!1!==n?(n="//"+(n||""),h&&"/"!==h[0]&&(h="/"+h)):n||(n=""),c&&"#"!==c[0]&&(c="#"+c),l&&"?"!==l[0]&&(l="?"+l),{protocol:s,host:n,pathname:h=h.replace(/[?#]/g,encodeURIComponent),search:l=l.replace("#","%23"),hash:c}}(e,t,r);return""+o.protocol+o.host+o.pathname+o.search+o.hash}var a="http://",s="w.w",h=a+s,c=/^https?|ftp|gopher|file/,p=/^(.*?)([#?].*)/,n=/^([a-z0-9.+-]*:)(\/{0,3})(.*)/i,l=/^([a-z0-9.+-]*:)?\/\/\/*/i,i=/^([a-z0-9.+-]*:)(\/{0,2})\[(.*)\]$/i;function u(e){try{return decodeURI(e)}catch(t){return e}}function f(e,r,a){void 0===r&&(r=!1),void 0===a&&(a=!1);var f=(e=e.trim()).match(p);e=f?u(f[1]).replace(/\\/g,"/")+f[2]:u(e).replace(/\\/g,"/"),i.test(e)&&"/"!==e.slice(-1)&&(e+="/");var m=!/(^javascript)/.test(e)&&e.match(n),v=l.test(e),d="";m&&(c.test(m[1])||(d=m[1].toLowerCase(),e=""+m[2]+m[3]),m[2]||(v=!1,c.test(m[1])?(d=m[1],e=""+m[3]):e="//"+m[3]),3!==m[2].length&&1!==m[2].length||(d=m[1],e="/"+m[3]));var g,b=e.match(/(:[0-9]+)/),y="";b&&b[1]&&3===b[1].length&&(e=e.replace(y=b[1],y+"00"));var w={},x="",R="";try{g=new URL(e)}catch(t){x=t,d||a||!/^\/\//.test(e)||/^\/\/.+[@.]/.test(e)||(R="/",e=e.substr(1));try{g=new URL(e,h)}catch(e){return w.protocol=d,w.href=d,w}}w.slashes=v&&!R,w.host=g.host===s?"":g.host,w.hostname=g.hostname===s?"":g.hostname.replace(/(\[|\])/g,""),w.protocol=x?d||null:g.protocol,w.search=g.search.replace(/\\/g,"%5C"),w.hash=g.hash.replace(/\\/g,"%5C");var U=e.split("#");!w.search&&~U[0].indexOf("?")&&(w.search="?"),w.hash||""!==U[1]||(w.hash="#"),w.query=r?t.decode(g.search.substr(1)):w.search.substr(1),w.pathname=R+u(g.pathname).replace(/"/g,"%22"),"about:"===w.protocol&&"blank"===w.pathname&&(w.protocol="",w.pathname=""),x&&"/"!==e[0]&&(w.pathname=w.pathname.substr(1)),d&&!c.test(d)&&"/"!==e.slice(-1)&&"/"===w.pathname&&(w.pathname=""),w.path=w.pathname+w.search,w.auth=[g.username,g.password].map(decodeURIComponent).filter(Boolean).join(":"),w.port=g.port,y&&(w.host=w.host.replace(y+"00",y),w.port=w.port.slice(0,-2)),w.href=R?""+w.pathname+w.search+w.hash:o(w);var j=/^(file)/.test(w.href)?["host","hostname"]:[];return Object.keys(w).forEach(function(e){~j.indexOf(e)||(w[e]=w[e]||null)}),w}var m=/^([a-z0-9.+-]*:\/\/\/)([a-z0-9.+-]:\/*)?/i,v=/https?|ftp|gopher|file/;function d(e,t){var r="string"==typeof e?f(e):e;e="object"==typeof e?o(e):e;var s=f(t),c="";r.protocol&&!r.slashes&&(c=r.protocol,e=e.replace(r.protocol,""),c+="/"===t[0]||"/"===e[0]?"/":""),c&&s.protocol&&(c="",s.slashes||(c=s.protocol,t=t.replace(s.protocol,"")));var p=e.match(m);p&&!s.protocol&&(e=e.substr((c=p[1]+(p[2]||"")).length),/^\/\/[^\/]/.test(t)&&(c=c.slice(0,-1)));var n=new URL(e,h+"/"),l=new URL(t,n).toString().replace(h,""),i=s.protocol||r.protocol;return i+=r.slashes||s.slashes?"//":"",!c&&i?l=l.replace(a,i):c&&(l=l.replace(a,"")),v.test(l)||~t.indexOf(".")||"/"===e.slice(-1)||"/"===t.slice(-1)||"/"!==l.slice(-1)||(l=l.slice(0,-1)),c&&(l=c+("/"===l[0]?l.substr(1):l)),l}exports.parse=f,exports.format=o,exports.resolve=d,exports.resolveObject=function(e,t){return f(d(e,t))};
 //# sourceMappingURL=index.js.map
 
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */var fetch=self.fetch.bind(self);module.exports=fetch;module.exports.default=module.exports;
 
 /***/ }),
 
@@ -15437,30 +15490,91 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
-/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Map */ "./components/Map.js");
+/* harmony import */ var _components_Restlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Restlist */ "./components/Restlist.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 var _this = undefined,
     _jsxFileName = "C:\\Users\\ricea\\Homework\\Project3\\pages\\index.js";
 
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
 
 
 var Index = function Index(props) {
-  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+    all: [{
+      title: "Juliet's",
+      name: "Juliet's",
+      position: {
+        lat: "30.261653",
+        lng: "-97.760059"
+      },
+      url: "http://www.juliet-austin.com/"
+    }, {
+      title: "Intero",
+      name: "Intero",
+      position: {
+        lat: "30.253737",
+        lng: "-97.714451"
+      },
+      url: "https://www.interorestaurant.com/"
+    }, {
+      title: "Le Politique",
+      name: "Le Politique",
+      position: {
+        lat: "30.265560",
+        lng: "-97.749093"
+      },
+      url: "https://lepolitiqueaustin.com/"
+    }, {
+      title: "Red Ash",
+      name: "Red Ash",
+      position: {
+        lat: "30.265690",
+        lng: "-97.744799"
+      },
+      url: "http://www.redashgrill.com/"
+    }, {
+      title: "Flyrite",
+      name: "Flyrite",
+      position: {
+        lat: "30.261338",
+        lng: "-97.718455"
+      },
+      url: "https://www.flyritechicken.com/"
+    }, {
+      title: "Koriente",
+      name: "Koriente",
+      position: {
+        lat: "30.267016",
+        lng: "-97.735982"
+      },
+      url: "https://www.koriente.com/"
+    }, {
+      title: "El Chilito",
+      name: "El Chilito",
+      position: {
+        lat: "30.263022",
+        lng: "-97.724423"
+      },
+      url: "https://www.elchilito.com/menu-3/"
+    }],
+    vegan: [],
+    mixed: []
+  }),
+      values = _useState[0],
+      setValues = _useState[1];
+
+  return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 9
+      lineNumber: 58,
+      columnNumber: 10
     }
   }, __jsx("link", {
     rel: "stylesheet",
@@ -15468,30 +15582,30 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 11
+      lineNumber: 59,
+      columnNumber: 5
     }
   }), __jsx("div", {
     className: "container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 63,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 9
+      lineNumber: 64,
+      columnNumber: 7
     }
   }, "Welcome to Vegan Gems"), __jsx("br", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 9
+      lineNumber: 65,
+      columnNumber: 7
     }
   }), __jsx("button", {
     id: "veganMap",
@@ -15505,8 +15619,8 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
+      lineNumber: 66,
+      columnNumber: 7
     }
   }, "Completly Vegan"), __jsx("button", {
     id: "mixedMap",
@@ -15518,15 +15632,15 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
+      lineNumber: 74,
+      columnNumber: 7
     }
   }, "Mixed")), __jsx("div", {
     className: "container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 83,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -15537,22 +15651,23 @@ var Index = function Index(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 1
+      lineNumber: 84,
+      columnNumber: 7
     }
-  }, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 5
+      lineNumber: 85,
+      columnNumber: 9
     }
-  }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    markers: values,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 5
+      lineNumber: 86,
+      columnNumber: 9
     }
   }))));
 };
@@ -15561,7 +15676,7 @@ var Index = function Index(props) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!******************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cricea%5CHomework%5CProject3%5Cpages%5Cindex.js ***!
   \******************************************************************************************************************************/
@@ -15584,5 +15699,5 @@ module.exports = dll_c2e10d183b950a67d9e7;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
