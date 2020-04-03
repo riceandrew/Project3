@@ -31,6 +31,7 @@ export class MapContainer extends Component {
 
 
   render() {
+
     return (
       <Map google={this.props.google}
       style={{ height: 600, width: 700}}
@@ -40,7 +41,7 @@ export class MapContainer extends Component {
       }}
       zoom={14}
       onClick={this.onMapClicked}>
-        {this.props.markers.all.map(marker => (
+        {this.props.markers[this.props.choice].map(marker => (
           <Marker
             title={marker.title}
             name={marker.name}
@@ -91,7 +92,7 @@ export default GoogleApiWrapper({
 //       <div className="col-8">
 
 //         <GoogleMapReact
-//           bootstrapURLKeys={{ key: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE" }}
+//           bootstrapURLKeys={{ key: "API KEY GOES HERE" }}
 //           defaultCenter={ {
 //             lat: 30.2672,
 //             lng: -97.7431

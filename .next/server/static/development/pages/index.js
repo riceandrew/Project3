@@ -237,10 +237,10 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 7
       }
-    }, this.props.markers.all.map(marker => __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
+    }, this.props.markers[this.props.choice].map(marker => __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
       title: marker.title,
       name: marker.name,
       position: marker.position,
@@ -250,7 +250,7 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 11
       }
     })), __jsx(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["InfoWindow"], {
@@ -259,21 +259,21 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 54,
         columnNumber: 11
       }
     }, __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 57,
         columnNumber: 13
       }
     }, __jsx("h4", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 58,
         columnNumber: 15
       }
     }, this.state.selectedPlace.name), __jsx("a", {
@@ -281,7 +281,7 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 59,
         columnNumber: 15
       }
     }, this.state.selectedPlace.picture), __jsx("a", {
@@ -289,7 +289,7 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 60,
         columnNumber: 15
       }
     }, this.state.selectedPlace.url))));
@@ -297,7 +297,7 @@ class MapContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 /* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_1__["GoogleApiWrapper"])({
-  apiKey: "API KEY GOES HERE"
+  apiKey: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE"
 })(MapContainer)); //BACKUP MAP
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 // class Map extends Component {
@@ -2244,10 +2244,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 const Index = props => {
-  let {
-    0: values,
-    1: setValues
-  } = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({
+  const {
+    0: choice,
+    1: setChoice
+  } = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])("all");
+  const values = {
     all: [{
       title: "Juliet's",
       name: "Juliet's",
@@ -2255,6 +2256,22 @@ const Index = props => {
         lat: "30.261653",
         lng: "-97.760059"
       },
+      img: __jsx("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 18
+        }
+      }, __jsx("img", {
+        src: true,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 23
+        }
+      })),
       url: "http://www.juliet-austin.com/"
     }, {
       title: "Intero",
@@ -2304,15 +2321,126 @@ const Index = props => {
         lng: "-97.724423"
       },
       url: "https://www.elchilito.com/menu-3/"
+    }, {
+      title: "Barton Creol",
+      name: "Barton Creol",
+      position: {
+        lat: "30.265084",
+        lng: "-97.731573"
+      },
+      url: "http://www.batoncreole.com/menu/"
+    }, {
+      title: "The Parlor",
+      name: "The Parlor",
+      position: {
+        lat: "30.308761",
+        lng: "-97.734115"
+      },
+      url: "https://www.theparloraustin.com/"
+    }, {
+      title: "Via 313",
+      name: "Via 313",
+      position: {
+        lat: "30.297858",
+        lng: "-97.741457"
+      },
+      url: "http://via313.com/menu"
     }],
-    vegan: [],
-    mixed: []
-  });
+    vegan: [{
+      title: "Mr.Natural",
+      name: "Mr.Natural",
+      position: {
+        lat: "30.256824",
+        lng: "-97.724522"
+      },
+      url: "https://www.mrnatural-austin.com/"
+    }, {
+      title: "Counter Culture",
+      name: "Counter Culture",
+      position: {
+        lat: "30.254679",
+        lng: "-97.717912"
+      },
+      url: "http://countercultureaustin.com/"
+    }, {
+      title: "Vegan Nom",
+      name: "Vegan Nom",
+      position: {
+        lat: "30.255139",
+        lng: "-97.718182"
+      },
+      url: "https://www.thevegannom.com/"
+    }, {
+      title: "Bouldin Creek Cafe",
+      name: "Bouldin Creek Cafe",
+      position: {
+        lat: "30.246495",
+        lng: "-97.756786"
+      },
+      url: "http://bouldincreekcafe.com/"
+    }, {
+      title: "Mother's Cafe",
+      name: "Mother's Cafe",
+      position: {
+        lat: "30.304367",
+        lng: "-97.725968"
+      },
+      url: "http://bouldincreekcafe.com/"
+    }, {
+      title: "Citizen's Eatery",
+      name: "Citizen's Eatery",
+      position: {
+        lat: "30.321724",
+        lng: "-97.739028"
+      },
+      url: "https://www.citizeneatery.com/"
+    }, {
+      title: "Conscious Cravings",
+      name: "Conscious Cravings",
+      position: {
+        lat: "30.250725",
+        lng: "-97.754297"
+      },
+      url: "https://www.consciouscravingsaustin.com/"
+    }, {
+      title: "Arlo's",
+      name: "Arlo's",
+      position: {
+        lat: "30.269616",
+        lng: "-97.736356"
+      },
+      url: "https://www.arloscurbside.com/"
+    }, {
+      title: "The Beer Plant",
+      name: "The Beer Plant",
+      position: {
+        lat: "30.296630",
+        lng: "-97.767746"
+      },
+      url: "http://thebeerplant.com/"
+    }, {
+      title: "Concious Cravings",
+      name: "Concious Cravings",
+      position: {
+        lat: "30.296851",
+        lng: "-97.707497"
+      },
+      url: "https://www.consciouscravingsaustin.com/menu"
+    }, {
+      title: "Rebel Cheese",
+      name: "Rebel Cheese",
+      position: {
+        lat: "30.301637",
+        lng: "-97.703127"
+      },
+      url: "https://www.rebelcheese.com/"
+    }]
+  };
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_0__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 144,
       columnNumber: 10
     }
   }, __jsx("link", {
@@ -2321,7 +2449,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 145,
       columnNumber: 5
     }
   }), __jsx("div", {
@@ -2329,27 +2457,28 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 149,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 150,
       columnNumber: 7
     }
   }, "Welcome to Vegan Gems"), __jsx("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 151,
       columnNumber: 7
     }
   }), __jsx("button", {
     id: "veganMap",
     type: "button",
     className: "btn btn-success",
+    onClick: () => setChoice("vegan"),
     style: {
       marginRight: 40,
       marginLeft: 20,
@@ -2358,20 +2487,21 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 152,
       columnNumber: 7
     }
   }, "Completly Vegan"), __jsx("button", {
     id: "mixedMap",
     type: "button",
     className: "btn btn-success",
+    onClick: () => setChoice("all"),
     style: {
       marginBottom: 5
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 161,
       columnNumber: 7
     }
   }, "Mixed")), __jsx("div", {
@@ -2379,7 +2509,7 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 171,
       columnNumber: 5
     }
   }, __jsx("div", {
@@ -2390,22 +2520,23 @@ const Index = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 172,
       columnNumber: 7
     }
   }, __jsx(_components_Restlist__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 173,
       columnNumber: 9
     }
   }), __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_1__["default"], {
     markers: values,
+    choice: choice,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 174,
       columnNumber: 9
     }
   }))));
