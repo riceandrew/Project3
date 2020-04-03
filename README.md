@@ -14,3 +14,4 @@ In this app we utilized the following technologies:
   4. Bootswatch
   5. Node
   6. MySQL
+  7. Google Maps API
