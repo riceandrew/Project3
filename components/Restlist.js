@@ -15,9 +15,25 @@ class Restlist extends Component {
      
       render() {
         return (
-          <div className="col-4 border" style={{backgroundColor: 'white'}}>
-            This is where the list will go
-          </div>
+          <div class="form-group">
+          <select multiple="5" class="form-control" id="exampleSelect2" style={{height: 600, width: 340, backgroundColor: 'lightgrey'}}>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+            <option style={{height:90, backgroundColor: 'black' }}>Insert Name</option>
+          </select>
+        </div>
         );
       }
     }

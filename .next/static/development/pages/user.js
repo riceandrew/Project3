@@ -327,7 +327,7 @@ var MapContainer = /*#__PURE__*/function (_Component) {
           lat: 30.2672,
           lng: -97.7431
         },
-        zoom: 14,
+        zoom: 13,
         onClick: this.onMapClicked,
         __self: this,
         __source: {
@@ -395,7 +395,7 @@ var MapContainer = /*#__PURE__*/function (_Component) {
   return MapContainer;
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 /* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["GoogleApiWrapper"])({
-  apiKey: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE"
+  apiKey: "API KEY GOES HERE"
 })(MapContainer)); //BACKUP MAP
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 // class Map extends Component {
@@ -411,7 +411,7 @@ var MapContainer = /*#__PURE__*/function (_Component) {
 //       // Important! Always set the container height explicitly
 //       <div className="col-8">
 //         <GoogleMapReact
-//           bootstrapURLKeys={{ key: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE" }}
+//           bootstrapURLKeys={{ key: "API KEY GOES HERE" }}
 //           defaultCenter={ {
 //             lat: 30.2672,
 //             lng: -97.7431

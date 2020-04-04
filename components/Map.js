@@ -39,7 +39,7 @@ export class MapContainer extends Component {
         lat: 30.2672,
         lng: -97.7431
       }}
-      zoom={14}
+      zoom={13}
       onClick={this.onMapClicked}>
         {this.props.markers[this.props.choice].map(marker => (
           <Marker
