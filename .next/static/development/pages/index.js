@@ -247,7 +247,7 @@ var MapContainer = /*#__PURE__*/function (_Component) {
   return MapContainer;
 }(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 /* harmony default export */ __webpack_exports__["default"] = (Object(google_maps_react__WEBPACK_IMPORTED_MODULE_8__["GoogleApiWrapper"])({
-  apiKey: "API KEY GOES HERE"
+  apiKey: "AIzaSyAuyheENMul3n_eUNnx_bKEV7BFrpMaSGE"
 })(MapContainer)); //BACKUP MAP
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 // class Map extends Component {

@@ -78,7 +78,7 @@ var Restlist = /*#__PURE__*/function (_Component) {
         id: "exampleSelect2",
         style: {
           height: 600,
-          width: 325,
+          width: 340,
           backgroundColor: 'lightgrey'
         },
         __self: this,
@@ -272,4 +272,4 @@ Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["d
 /***/ })
 
 })
-//# sourceMappingURL=index.js.277c712182d766300b6e.hot-update.js.map
+//# sourceMappingURL=index.js.59df6fb1b9cb7d95180a.hot-update.js.map
